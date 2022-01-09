@@ -65,9 +65,9 @@ function Signup({navigation}){
 
   const [selectedValue, setSelectedValue] = useState("Select");
 // alert value of selected colony
-  const Show=(value)=>{
-    Alert.alert(value)
-  }
+  // const Show=(value)=>{
+  //   Alert.alert(value)
+  // }
   // extra for getting value of select
   // Alert.alert(selectedValue)  
   return(
@@ -127,7 +127,7 @@ function Signup({navigation}){
 <Picker
       selectedValue={selectedValue}
       style={{   borderColor:"white", borderWidth:1 , width: 120,color:"#999"}}
-        onValueChange={Show}>
+        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
 
         <Picker.Item label="Madina-Town" value="Madina-Town" />
         <Picker.Item label="Mansoorabad" value="Mansoorabad" />
@@ -269,7 +269,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor:"white",
      
-      marginLeft:5,
+      marginLeft:"38%",
       marginTop: 5
 
    
